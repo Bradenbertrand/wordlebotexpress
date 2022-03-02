@@ -5,7 +5,7 @@ const app = express()
 const port = 5000
 const scoreRoutes = require('./routes/scores')
 
-const CONNECTION_URL = 'mongodb+srv://worthless:VeryDeadHorses@cluster0.nlzra.mongodb.net/WordleLeaderboard?retryWrites=true&w=majority';
+const CONNECTION_URL = process.env.mongodburl;
 const PORT = process.env.port || 5000;
 app.use(cors())
 app.use('/', scoreRoutes)
